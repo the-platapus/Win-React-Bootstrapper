@@ -226,7 +226,8 @@ $choice = Show-Menu -Title 'Choose an Option' -Options $options
 switch ($choice) {
     0 {
         npm install -g create-react-native-app
-	npm install -g react-native-cli
+        npm uninstall -g react-native-cli @react-native-community/cli
+        npx @react-native-community/cli@latest init AwesomeProject
     }
     1 {
         npx create-expo-app@latest
